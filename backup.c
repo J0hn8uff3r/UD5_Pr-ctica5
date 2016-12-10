@@ -31,7 +31,7 @@ int main(int argc, char **argv) {
             if(destf == -1) { //Creación de fichero de destino incorrecta
                 close(sourcef);
             } else { //Creación de fichero dump correcta y fichero origen existe
-			int totalBytes;
+			int totalBytes=0;
 			int suma=0;
                 while ((bytesLeidos = read(sourcef,buffer,sizeof(buffer)))>0) {//Bucle para leer sourcef línea a línea
                     write (destf, buffer, bytesLeidos);
